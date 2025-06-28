@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: stock-postgres
+    environment:
+      POSTGRES_DB: stockdb
+      POSTGRES_USER: stockuser
+      POSTGRES_PASSWORD: stockpass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - stock-network
+
+  backend:
+    build: ./backend
+    container_name: stock-backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/stockdb
+      SPRING_DATASOURCE_USERNAME: stockuser
+      SPRING_DATASOURCE_PASSWORD: stockpass
+    networks:
+      - stock-network
+    restart: unless-stopped
+
+  frontend:
+    build: .
+    container_name: stock-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - stock-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  stock-network:
+    driver: bridge
